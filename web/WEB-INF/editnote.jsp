@@ -1,7 +1,7 @@
 <%-- 
     Document   : editnote
     Created on : Sep 29, 2021, 2:03:22 PM
-    Author     : hazco
+    Author     : hazwi
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

@@ -48,12 +48,15 @@ public class NoteServlet extends HttpServlet {
         }
         catch(IOException e){
             request.setAttribute("fileErr", e.getMessage());
+            return;
         }   
        if(request.getParameter("edit") != null){
            getServletContext().getRequestDispatcher("/WEB-INF/editnote.jsp").forward(request,response);
+           return;
        }
        else{
            getServletContext().getRequestDispatcher("/WEB-INF/viewnote.jsp").forward(request,response);
+           return;
        }
     }
 
@@ -74,5 +77,6 @@ public class NoteServlet extends HttpServlet {
         request.setAttribute("note", note2);
         pw.close();
         getServletContext().getRequestDispatcher("/WEB-INF/viewnote.jsp").forward(request,response);
+        return;
     }
 }
