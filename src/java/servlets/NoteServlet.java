@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package servlets;
 
 import java.io.BufferedReader;
@@ -32,8 +28,7 @@ public class NoteServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        try{
+       try{
             path = getServletContext().getRealPath("/WEB-INF/note.txt");
             br = new BufferedReader(new FileReader(new File(path)));
             if (br.ready()){
@@ -48,13 +43,13 @@ public class NoteServlet extends HttpServlet {
         }
         catch(IOException e){
             request.setAttribute("fileErr", e.getMessage());
-            return;
-        }   
+        } 
+           
        if(request.getParameter("edit") != null){
            getServletContext().getRequestDispatcher("/WEB-INF/editnote.jsp").forward(request,response);
            return;
        }
-       else{
+       else{           
            getServletContext().getRequestDispatcher("/WEB-INF/viewnote.jsp").forward(request,response);
            return;
        }

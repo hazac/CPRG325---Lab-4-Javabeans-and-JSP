@@ -24,8 +24,6 @@ public class Note implements Serializable{
         this.contents = content;
     }
 
-
-
     public String getTitle() {
         return title;
     }

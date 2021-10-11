@@ -22,7 +22,7 @@
                 </div>
                 <div>
                     <label><b>Contents:</b></label>
-                    <textarea type="textbox" name="content" value="" rows="8" cols="24">${note.contents}
+                    <textarea name="content" rows="8" cols="24">${note.contents}
                     </textarea>
                 </div>
                 <div>
@@ -30,5 +30,6 @@
                 </div>
             </form>
         </div>
+        
     </body>
 </html>
